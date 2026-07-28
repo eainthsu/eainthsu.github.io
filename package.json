@@ -1,0 +1,13 @@
+{
+  "name": "eaint-the-hsu-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Responsive portfolio for Eaint The Hsu",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
