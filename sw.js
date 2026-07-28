@@ -1,4 +1,4 @@
-const CACHE_NAME = "eaint-portfolio-v5";
+const CACHE_NAME = "eaint-portfolio-v6";
 const SHELL = [
   "./",
   "./index.html",

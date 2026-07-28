@@ -23,6 +23,8 @@ let downloadToastTimer;
 let activeDocument;
 let activeDocumentPage = 0;
 
+const ASSET_VERSION = "20260728";
+const assetUrl = (path) => `${path}?v=${ASSET_VERSION}`;
 const portfolioSlideNumbers = [1, 2, 4, 5, 6, 7, 10, 11, 13, 15, 18, 19];
 
 const showcaseDocuments = {
@@ -34,8 +36,8 @@ const showcaseDocuments = {
     pages: portfolioSlideNumbers.map((slideNumber) => {
       const number = String(slideNumber).padStart(2, "0");
       return {
-        full: `assets/showcase/full/portfolio-${number}.webp`,
-        thumbnail: `assets/showcase/thumbs/portfolio-${number}.webp`,
+        full: assetUrl(`assets/showcase/full/portfolio-${number}.webp`),
+        thumbnail: assetUrl(`assets/showcase/thumbs/portfolio-${number}.webp`),
         aspect: "16 / 9",
         ratio: "1.7778",
         layout: slideNumber === 2 ? "intro-clean" : slideNumber === 5 ? "skills-tight" : undefined,
@@ -50,8 +52,8 @@ const showcaseDocuments = {
     pages: Array.from({ length: 2 }, (_, index) => {
       const number = String(index + 1).padStart(2, "0");
       return {
-        full: `assets/showcase/full/cv-${number}.webp`,
-        thumbnail: `assets/showcase/thumbs/cv-${number}.webp`,
+        full: assetUrl(`assets/showcase/full/cv-${number}.webp`),
+        thumbnail: assetUrl(`assets/showcase/thumbs/cv-${number}.webp`),
         aspect: "794 / 1123",
         ratio: "0.7070",
       };
